@@ -42,7 +42,7 @@ function max(arr) {
 function capitalize(str) {
   // TODO: Return string with first letter capitalized
   // "hello" -> "Hello"
-  const firstLetter = str.charAt(0).toUpperCase();
+  const firstLetter = str.charAt(0).toUpperCase(); 
   const remainingLetters = str.substring(1);
   return firstLetter.concat(remainingLetters);
 }
@@ -57,7 +57,7 @@ function reverse(str) {
 function countVowels(str) {
   // TODO: Return count of vowels (a, e, i, o, u)
   // "hello" -> 2
-  const numOfVowels = 0;
+  let numOfVowels = 0;
   for (const s of str.toLowerCase().split("")) {
     if (s === "a" || s === "e" || s === "i" || s === "o" || s === "u") {
         numOfVowels++;
@@ -74,7 +74,7 @@ const student = {
   
   getAverage: function() {
     // TODO: Return average of this.grades
-    return average(grades);
+    return average(this.grades);
   },
   
   isHonorRoll: function() {
@@ -105,3 +105,26 @@ console.log("Student:", student.name);
 console.log("Grades:", student.grades);
 console.log("Average:", student.getAverage());
 console.log("Honor Roll:", student.isHonorRoll());
+
+
+// ============ Test Output ============
+// === Part 1: Arrays ===
+// Numbers: [
+//   10,  5, 8, 12, 3,
+//    7, 15, 2,  9, 6
+// ]
+// Sum: 77
+// Average: 7.7
+// Min: 2
+// Max: 15
+// 
+// === Part 2: Strings ===
+// capitalize('hello'): Hello
+// reverse('hello'): olleh
+// countVowels('hello'): 2
+// 
+// === Part 3: Object ===
+// Student: Your Name
+// Grades: [ 85, 92, 78, 90, 88 ]
+// Average: 86.6
+// Honor Roll: true
