@@ -8,20 +8,34 @@ const numbers = [10, 5, 8, 12, 3, 7, 15, 2, 9, 6];
 function sum(arr) {
   // TODO: Return the sum of all numbers
   // Hint: Use a for loop or arr.reduce()
+  let total = 0;
+  for (const i of arr) {
+    total += i;
+  }
+  return total;
 }
 
 function average(arr) {
   // TODO: Return the average
   // Hint: Use your sum function!
+  return sum(arr) / arr.length;
 }
 
 function min(arr) {
   // TODO: Return the smallest number
   // Hint: Use Math.min(...arr)
+  return Math.min(...arr);
 }
 
 function max(arr) {
   // TODO: Return the largest number
+  let most = arr[0];
+  for (const i of arr) {
+    if (i > most) {
+        most = i;
+    }
+  }
+  return most;
 }
 
 // ============ PART 2: STRING FUNCTIONS ============
