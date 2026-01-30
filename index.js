@@ -74,10 +74,16 @@ const student = {
   
   getAverage: function() {
     // TODO: Return average of this.grades
+    return average(grades);
   },
   
   isHonorRoll: function() {
     // TODO: Return true if average > 85
+    if (this.getAverage() > 85) {
+        return true;
+    } else {
+        return false;
+    }
   }
 };
 
