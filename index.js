@@ -42,9 +42,11 @@ function max(arr) {
 function capitalize(str) {
   // TODO: Return string with first letter capitalized
   // "hello" -> "Hello"
-  const firstLetter = str.charAt(0).toUpperCase(); 
-  const remainingLetters = str.substring(1);
-  return firstLetter.concat(remainingLetters);
+
+  //split string in two
+  const firstLetter = str.charAt(0).toUpperCase(); //capitalize first letter
+  const remainingLetters = str.substring(1); //hold remaining letters of the word
+  return firstLetter.concat(remainingLetters); //concat the first letter with remaining letters
 }
 
 function reverse(str) {
