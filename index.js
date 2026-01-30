@@ -42,17 +42,28 @@ function max(arr) {
 function capitalize(str) {
   // TODO: Return string with first letter capitalized
   // "hello" -> "Hello"
+  const firstLetter = str.charAt(0).toUpperCase();
+  const remainingLetters = str.substring(1);
+  return firstLetter.concat(remainingLetters);
 }
 
 function reverse(str) {
   // TODO: Return the string reversed
   // "hello" -> "olleh"
   // Hint: str.split("").reverse().join("")
+  return str.split("").reverse().join("");
 }
 
 function countVowels(str) {
   // TODO: Return count of vowels (a, e, i, o, u)
   // "hello" -> 2
+  const numOfVowels = 0;
+  for (const s of str.toLowerCase().split("")) {
+    if (s === "a" || s === "e" || s === "i" || s === "o" || s === "u") {
+        numOfVowels++;
+    }
+  }
+  return numOfVowels;
 }
 
 // ============ PART 3: OBJECT ============
